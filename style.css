@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+:root {
+    --f1: 'Pixelify Sans', sans-serif;
+    --f2: 'Single Day', cursive;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 90svh;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin: 10px;
+    border: 5px solid red;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px red;
+    text-align: center;
+    font-family: var(--f2);
+    background-color: white;
+}
+
+img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.btn {
+    font-size: 1em;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    border: solid 2px rgb(245, 73, 73);
+    border-radius: 5px;
+    font-family: var(--f2);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(245, 73, 73);
+    color: white;
+}
