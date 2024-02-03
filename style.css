@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 :root {
     --f1: 'Pixelify Sans', sans-serif;
     --f2: 'Single Day', cursive;
@@ -18,6 +23,7 @@ body {
     height: 90svh;
     align-items: center;
     justify-content: center;
+    transition-duration: 0.5s;
 }
 
 #container {
@@ -25,13 +31,14 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 50px;
-    margin: 10px;
-    border: 5px solid red;
+    margin: 10px; 
+    border: 5px solid rgb(255, 0, 0);
     border-radius: 10px;
     box-shadow: 4px 4px 10px red;
     text-align: center;
     font-family: var(--f2);
     background-color: white;
+    z-index: 0;
 }
 
 img {
@@ -59,4 +66,18 @@ span {
 .btn:hover {
     background-color: rgb(245, 73, 73);
     color: white;
+}
+
+/* FOR NO */
+#grat {
+    position: absolute;
+    color: white;
+    font-size: 5em;
+    z-index: 1;
+    opacity: 0;
+}
+
+.show {
+    animation: fadeIn 1s ease 1s both;
+    cursor: default;
 }
