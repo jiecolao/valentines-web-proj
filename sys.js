@@ -4,12 +4,28 @@ let yesBtn = document.getElementById("yes");
 let noBtn = document.getElementById("no");
 let heartImg = document.getElementById("heart");
 let container = document.getElementById("container");
+let decorOne = document.getElementById("dec1");
+let decorTwo = document.getElementById("dec4");
+let decorTwoThree = document.getElementById("dec4-1");
 
 function no(){
     // negate effects on "yes"
     countOne = 1;
     yesBtn.innerHTML = "yes..";
     document.getElementById("head").innerHTML = "Will you be my valentine?...";
+    decorOne.classList.remove("animatetoR");
+    decorOne.style.opacity = "0";
+    decorTwo.classList.remove("animatetoR");
+    decorTwo.style.opacity = "0";
+    decorTwoThree.classList.remove("animatetoL");
+    decorTwoThree.style.opacity = "0";
+
+    // decorOne.classList.add("animatetoR");
+    // decorOne.style.opacity = "1";
+    // decorTwo.classList.add("animatetoR");
+    // decorTwo.style.opacity = "1";
+    // decorTwoThree.classList.add("animatetoL");
+    // decorTwoThree.style.opacity = "1";
 
     if (count == 1){
         noBtn.innerHTML = "You sure?";
@@ -44,7 +60,7 @@ function no(){
     } else {
         // CANCEL DESIGN
         document.body.style.backgroundColor = "rgb(0, 0, 0)";
-        document.querySelector("div").remove();
+        document.getElementById("container").remove();
         document.getElementById("grat").classList.add("show");
         document.getElementById("grat").style.visibility = "visible";
     }
@@ -63,16 +79,27 @@ function yes(){
     container.style.boxShadow = "4px 4px 10px rgb(255, 0, 0)";
     
     if (countOne == 1){
-        yesBtn.innerHTML = "really??";    
+        yesBtn.innerHTML = "really??"; 
     } else if (countOne == 2){
         yesBtn.innerHTML = "wait really??";
+        decorOne.classList.add("animatetoR");
+        decorOne.style.opacity = "1";
     } else if (countOne == 3){
         document.getElementById("head").innerHTML = "WAIT, FOR REAL?";
         yesBtn.innerHTML = "REALLY?";
+        decorTwo.classList.add("animatetoR");
+        decorTwo.style.opacity = "1";
+        decorTwoThree.classList.add("animatetoL");
+        decorTwoThree.style.opacity = "1";
     } else {
         document.getElementById("head").innerHTML = "THANK YOU, MY VALENTINE!"
         document.getElementById("no").remove();
+        document.getElementById("hug").style.opacity = "1";
+        document.getElementById("fw-1").style.opacity = "1";
+        document.getElementById("fw-2").style.opacity = "1";
+        
         yesBtn.remove();
+
     }
     countOne++;
     console.log(count);

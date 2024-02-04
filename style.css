@@ -6,6 +6,23 @@
     to {opacity: 1;}
 }
 
+@keyframes slidefromR {
+    from {
+        transform: translateX(100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slidefromL {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 :root {
     --f1: 'Pixelify Sans', sans-serif;
     --f2: 'Single Day', cursive;
@@ -24,6 +41,39 @@ body {
     align-items: center;
     justify-content: center;
     transition-duration: 0.5s;
+    overflow-x: hidden;
+}
+
+.decors {
+    position: absolute;
+    opacity: 0;
+}
+
+#img-cont > #dec1 {
+    top: 0;
+    left: 0;
+    /* z-index: 10; */
+}
+
+#img-cont > #dec4 {
+    left: 0;
+    bottom: 0;
+    /* z-index: 10; */
+}
+#img-cont > #dec4-1 {
+    right: 0;
+    bottom: 0;
+    /* z-index: 10; */
+    /* transform: translateX(300px); */
+}
+
+#img-cont > #fw-1 {
+    left: 15%;
+    top: 0;
+}
+#img-cont > #fw-2 {
+    right: 15%;
+    bottom: 0;
 }
 
 #container {
@@ -41,10 +91,17 @@ body {
     z-index: 0;
 }
 
-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#heart {
+    opacity: 1;
+}
+
+#hug {
+    position: absolute;
+    opacity: 0;
+}
+
+#head {
+    margin-top: 10px;
 }
 
 span {
@@ -75,9 +132,22 @@ span {
     font-size: 5em;
     z-index: 1;
     opacity: 0;
+    font-family: var(--f2);
 }
 
 .show {
     animation: fadeIn 1s ease 1s both;
     cursor: default;
+}
+
+.show1 {
+    transition: opacity 0.5s ease 1s;
+}
+
+.animatetoR {
+    animation: slidefromL 0.5s ease both;
+}
+
+.animatetoL {
+    animation: slidefromR 0.5s ease both;
 }
