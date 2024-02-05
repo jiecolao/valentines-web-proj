@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You have a letter!</title>
+    <link rel="icon" href="assets/icon.png">
+    <style>
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 90svh;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            background: fixed no-repeat radial-gradient(rgb(255, 215, 215) 50%, rgb(249, 135, 135));
+        }
+
+        img {
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+
+        a {
+            position: absolute;
+            width: 280px;
+            height: 190px;
+            /* z-index: -1; */
+        }
+
+    </style>
+</head>
+<body>
+    <img width="300" height="300" src="assets/icon.png">
+    <a href="index.html"></a>
+</body>
+</html>

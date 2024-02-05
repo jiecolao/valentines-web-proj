@@ -40,11 +40,11 @@ body {
     height: 90svh;
     align-items: center;
     justify-content: center;
-    transition-duration: 0.5s;
     overflow-x: hidden;
+    background: fixed no-repeat radial-gradient(rgb(255, 215, 215) 50%, rgb(249, 135, 135));
 }
 
-.decors {
+.decors {   
     position: absolute;
     opacity: 0;
 }
@@ -52,6 +52,11 @@ body {
 #img-cont > #dec1 {
     top: 0;
     left: 0;
+    /* z-index: 10; */
+}
+#img-cont > #dec1-1 {
+    top: 0;
+    right: 0;
     /* z-index: 10; */
 }
 
@@ -136,7 +141,7 @@ span {
 }
 
 .show {
-    animation: fadeIn 1s ease 1s both;
+    animation: fadeIn 1.5s ease 1s both;
     cursor: default;
 }
 
