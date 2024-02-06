@@ -17,6 +17,8 @@ function no(){
     document.getElementById("head").innerHTML = "Will you be my valentine?...";
     decorOne.classList.remove("animatetoR");
     decorOne.style.opacity = "0";
+    decorOneOne.classList.remove("animatetoL");
+    decorOneOne.style.opacity = "0";
     decorTwo.classList.remove("animatetoR");
     decorTwo.style.opacity = "0";
     decorTwoThree.classList.remove("animatetoL");

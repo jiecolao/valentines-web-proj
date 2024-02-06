@@ -133,11 +133,8 @@ span {
 /* FOR NO */
 #grat {
     position: absolute;
-    color: white;
-    font-size: 5em;
-    z-index: 1;
+    z-index: 0;
     opacity: 0;
-    font-family: var(--f2);
 }
 
 .show {
